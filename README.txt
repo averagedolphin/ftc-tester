@@ -6,7 +6,7 @@ Just a quick little java app that runs on the driver station for FTC Robots, use
 
 Controls:
 Dpad Up/Down = Select a Motor
-Right Stick X = Selected Motors Power
+Right Stick Y = Selected Motors Power
 A = Keeps Selected Motors Power / Servos Position at Right Stick x
 B = Sets selected Motor or Servo to 0
 
