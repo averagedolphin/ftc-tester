@@ -8,4 +8,4 @@ work on most phones
 Controls:\
 Dpad Up/Down = Select a Motor\
 Right Stick Y = Selected Motors Power\
-Right/Left Bumpers = Changes menu between motor/servo\
+Right/Left Bumpers = Changes menu between motor/servo
