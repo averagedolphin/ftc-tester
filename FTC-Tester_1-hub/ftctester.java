@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import java.lang.Thread;
 import java.lang.System;
 
-@TeleOp(name = "FTC Tester")
+@TeleOp(name = "FTC Tester (1 Hub)")
 public class ftctester extends LinearOpMode {
 
 // Motor Declarations, Plus their Hardware maps
