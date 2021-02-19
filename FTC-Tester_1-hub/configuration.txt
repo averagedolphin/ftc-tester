@@ -1,0 +1,15 @@
+Configuration required:
+
+CONTROL
+HUB /        MOTOR/
+EXPANSION    SERVO
+HUB PORT     NAME
+             
+Motor 0      "motor0"
+Motor 1      "motor1"
+Motor 2      "motor2"
+Motor 3      "motor3"
+Servo 0      "servo0"
+Servo 1      "servo1"
+Servo 2      "servo2"
+Servo 3      "servo3"
