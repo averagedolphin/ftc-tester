@@ -34,6 +34,9 @@ public class ftctester extends LinearOpMode {
   servo2 = hardwareMap.get(Servo.class,   "servo2");
   servo3 = hardwareMap.get(Servo.class,   "servo3");
 
+  
+  
+  
   @Override
   public void runOpMode() {
     double power;
@@ -75,7 +78,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 1;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -109,7 +112,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 2;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -143,7 +146,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 3;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -175,7 +178,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 0;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -211,7 +214,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 1;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -245,7 +248,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 2;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -279,7 +282,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 3;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up || gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -311,7 +314,7 @@ public class ftctester extends LinearOpMode {
              selectedMotor = 0;
            }
                   
-           while (gamepad1.dpad_up && gamepad1.dpad_down) {
+           while (gamepad1.dpad_up | gamepad1.dpad_down) {
              try {
                Thread.sleep(25);
              } catch (exception Ex) {
@@ -325,7 +328,16 @@ public class ftctester extends LinearOpMode {
         
         if (gamepad1.right_bumper || gamepad1.left_bumper) {
           motorMenu = !motorMenu;
-         }
+          while (gamepad1.right_bumper || gamepad1.left_bumper) {
+             try {
+               Thread.sleep(25);
+             } catch (exception Ex) {
+               telemetry.addLine("ERROR: Thread error caught at sleep.");    
+               System.exit(0);
+             }
+           }
+        }
+       }
         telemetry.update(); 
    }
   }
